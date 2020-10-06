@@ -1,7 +1,7 @@
 *{
     font-family: Lato;
 }
-.second-page-s {
+.welcome-page-s {
     display:flex;
     align-items: center;
     justify-content: space-around;
@@ -12,10 +12,10 @@
     background-color: #fff9f9;
     padding-top: 15px;
 }
-.second-page-div {
+.welcome-page-div {
     padding-top: 5px;
 }
-.second-page-l{
+.welcome-page-l{
     display: none;
 }
 
@@ -48,7 +48,7 @@
     object-fit: contain;
 }
 
-.btn-secondPage{
+.btn-welcomePage{
     background: none;
     border: 0;
     font-family: Lato;
@@ -126,9 +126,11 @@ align-content: center;
     display: none;
 }
 
+/*Responsive*/
+
 /*mas de 768*/
 @media (min-width: 768px) {
-    .second-page-s {
+    .welcome-page-s {
         min-width: 768px;
         min-height: 1024px;
     }
@@ -197,10 +199,10 @@ align-content: center;
 
 /*más de 1024*/
 @media (min-width: 1024px) {
-    .second-page-s{
+    .welcome-page-s{
         display: none;
     }
-    .second-page-l{
+    .welcome-page-l{
         display: flex;
         min-width: 1024px;
         min-height: 768px;
@@ -268,7 +270,7 @@ align-content: center;
         margin-top: 15%;
     }
 
-    .btn-secondPage{
+    .btn-welcomePage{
             width: 420px;
             height: 72px;
             border-radius: 16px;
@@ -306,7 +308,7 @@ align-content: center;
         width: 85%;
     }
 
-    .btn-secondPage{
+    .btn-welcomePage{
         margin-top: 5%;
     }
 

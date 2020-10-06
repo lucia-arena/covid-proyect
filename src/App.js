@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import FirstWindow from './components/structure/firstWindow/FirstWindow'
-import SecondWindow from './components/structure/secondWindow/SecondWindow'
-import ThirdWindow from './components/structure/thirdWindow/ThirdWindow'
-import FourthWindow from './components/structure/fourthWindow/FourthWindow'
-import FifthWindow from "./components/structure/fifthWindow/FifthWindow"
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import Cover from './components/structure/cover/Cover'
+import Welcome from './components/structure/welcome/Welcome'
+import SetCoords from './components/structure/setCoords/SetCoords'
+import AlertType from './components/structure/alertType/AlertType'
+import Amount from "./components/structure/amount/Amount"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import HelpWindow from './components/helpWindow/HelpWindow';
 import NotFound from "./components/structure/notFound404/NotFound404";
 import moment from 'moment';
@@ -17,6 +17,8 @@ import {firebase} from "./firebase";
 
 
 class App extends React.Component {
+
+//Borrado de las alertas en la base de datos
 
   async deleteAlert(){
     let oldDate= moment().subtract(2, 'hours').format("X")
@@ -35,7 +37,7 @@ class App extends React.Component {
       });
   })
   .catch(function(error) {
-      console.log("Error getting documents: ", error);
+      /* console.log("Error getting documents: ", error); */
   });
 
   }
@@ -56,7 +58,7 @@ class App extends React.Component {
   }
  
  componentDidMount(){
-let noldDate= moment().format().subtract(2, 'hours') 
+let oldDate= moment().format().subtract(2, 'hours') 
 
 } 
  */
@@ -65,12 +67,12 @@ let noldDate= moment().format().subtract(2, 'hours')
     <div>
       <Router>
         <Switch>
-          <Route exact path="/" component={FirstWindow} />
-          <Route path="/presentacion" component={SecondWindow} />
-          <Route path="/mapa" component={ThirdWindow} />
-          <Route path="/alerta" component={FourthWindow} />
+          <Route exact path="/" component={Cover} />
+          <Route path="/presentacion" component={Welcome} />
+          <Route path="/mapa" component={SetCoords} />
+          <Route path="/alerta" component={AlertType} />
           <Route path="/ayuda" component={HelpWindow} />
-          <Route path="/alerta-detalle" component={FifthWindow} />
+          <Route path="/alerta-detalle" component={Amount} />
           <Route path="/database" component={Database} />
           <Route component={NotFound}/>
         </Switch>

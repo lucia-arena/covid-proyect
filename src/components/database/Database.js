@@ -7,14 +7,10 @@ const Database = () => {
     const [alerts, setAlerts] = React.useState([])
     const [latitude, setLatitude] = React.useState("")
     const [longitude, setLongitude] = React.useState("")
-/*     const [typeOfAlert, setTypeOfAlert] = React.useState("")
-    const [amountOfPeople, setAmountOfPeople] = React.useState("") */
+
     
     React.useEffect(()=>{
   
-/*       const getLocalData = () =>{
-
-      } */
       const getData = async () =>{
         try {
           const db = firebase.firestore()
@@ -22,8 +18,7 @@ const Database = () => {
           const arrayData = await data.docs.map(doc =>({id: doc.id, ...doc.data()}))
           setAlerts(arrayData)
           console.log(setAlerts)
-/*           let typeOfAlert = localStorage.getItem("typeOfAlert")
-          console.log(typeOfAlert) */
+
   
         } catch(error){
           console.log(error)
@@ -35,10 +30,6 @@ const Database = () => {
     const addData = async (e) => {
       e.preventDefault()
   
-/*       if(!latitude.trim()){
-        console.log("está vacío")
-        return
-      } */
 
       try {
 
@@ -54,10 +45,7 @@ const Database = () => {
         const data = await db.collection("alerts").add(newAlert)
        
        setAlerts([...alerts,{...newAlert,id:data.id}])
-/*         setLatitude("")
-        setLongitude("")
-        setTypeOfAlert("")
-        setAmountOfPeople("") */
+
       } catch (error){
           console.log(error)
       }

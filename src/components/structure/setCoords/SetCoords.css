@@ -31,12 +31,14 @@ leaflet-control-zoom leaflet-bar leaflet-control {
     height: 52px;
     border-radius: 16px;
     background-color: #ff1833;
+    border-color: #ff1833;
     position: absolute;
     top: 567px;
     left: 27px;
     display: flex;
     flex-direction: center;
     align-items: center;
+    margin-top: -10%;
 
 }
 .button-alert-div{

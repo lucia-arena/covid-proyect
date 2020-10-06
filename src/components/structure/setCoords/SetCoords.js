@@ -13,9 +13,9 @@ import L from "leaflet";
 import Form from "../../form/Form";
 import { firebase } from "../../../firebase";
 
-import "./ThirdWindow.css";
+import "./SetCoords.css";
 
-class ThirdWindow extends React.Component {
+class SetCoords extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -155,7 +155,6 @@ class ThirdWindow extends React.Component {
         <img
           onClick={this.handleClickHelp}
           src="img/Help/ButtonHelp/ButtonHelp.svg"
-          src="img/Help/ButtonHelp/ButtonHelp.png"
           alt="logo"
         
           className="help"
@@ -166,10 +165,9 @@ class ThirdWindow extends React.Component {
         <button onClick={this.handleClickAlert} className="button-alert">
           <div className="button-alert-div">
             <img
-              src="img/ThirdWindow/CircleAddAlert/CircleAddAlert.svg"
-              src="img/ThirdWindow/CircleAddAlert/CircleAddAlert.png"
+              src="img/SetCoords/CircleAddAlert/CircleAddAlert.svg"
               alt="logo"
-              srcSet="img/ThirdWindow/CircleAddAlert/CircleAddAlert@2x.png 2x, img/ThirdWindow/CircleAddAlert/CircleAddAlert@3x.png 3x"
+              srcSet="img/SetCoords/CircleAddAlert/CircleAddAlert@2x.png 2x, img/SetCoords/CircleAddAlert/CircleAddAlert@3x.png 3x"
               className="button-alert-img"
             ></img>
             <p className="button-alert-p">Añadir alerta</p>
@@ -180,4 +178,4 @@ class ThirdWindow extends React.Component {
   }
 }
 
-export default ThirdWindow;
+export default SetCoords;
